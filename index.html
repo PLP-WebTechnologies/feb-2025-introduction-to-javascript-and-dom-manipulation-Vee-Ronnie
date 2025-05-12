@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  
+  <style>
+    img {
+      width: 300px;
+    }
+
+    #feedback {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Application Questionnaire</h1>
+      <h3>Which position are you applying for?</h3>
+      <ol type="i">
+        <li>Software Engineer</li>
+        <li>Data Scientist</li>
+        <li>Web Developer</li>
+        <li>Project Manager</li>
+        <li>Accountant</li>
+        <li>Human Resource Manager</li>
+      </ol>
+      <p><strong>Answer:</strong> ___________________________________________</p>
+    </section>
+
+    <section>
+      <h1>Registration Form</h1>
+      <p>
+        This form will be used to collect your details which will be saved into our database. We ask that you fill it
+        as accurately as possible. Giving out dishonest information will disqualify you.
+      </p>
+
+      <form id="registrationForm">
+        <fieldset>
+          <legend><h2>Personal Information</h2></legend>
+          <p>What is your gender?</p>
+          <input type="radio" id="male" name="gender" value="Male" required />
+          <label for="male">Male</label><br />
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label><br /><br />
+
+          <label for="fName">First Name</label><br />
+          <input type="text" id="fName" name="fName" placeholder="Enter your first name" required /><br /><br />
+
+          <label for="lName">Last Name</label><br />
+          <input type="text" id="lName" name="lName" placeholder="Enter your last name" required /><br /><br />
+
+          <label for="DOB">Date of Birth</label><br />
+          <input type="date" id="DOB" name="DOB" required /><br /><br />
+
+          <label for="pwd">Password</label><br />
+          <input type="password" id="pwd" name="pwd" minlength="4" maxlength="8" placeholder="Password" required />
+        </fieldset>
+
+        <fieldset>
+          <legend><h2>Contact Information</h2></legend>
+
+          <label for="number">Phone Number</label><br />
+          <input type="tel" id="number" name="number" pattern="[+0-9 ]{10,20}" placeholder="+254 712 345 678" required /><br /><br />
+
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="id">Identification Number</label><br />
+          <input type="number" id="id" name="id" required /><br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend><h2>Address</h2></legend>
+
+          <label for="origin-country">Country of Origin</label><br />
+          <select id="origin-country" name="origin-country">
+            <option value="Kenya">Kenya</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Sudan">Sudan</option>
+          </select><br /><br />
+
+          <label for="residence-country">Country of Residence</label><br />
+          <select id="residence-country" name="residence-country">
+            <option value="Kenya">Kenya</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Other">Other</option>
+          </select>
+        </fieldset>
+
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+      <div id="feedback" class="hidden"></div>
+      <button id="toggleMessageButton">Click to Toggle Message</button>
+    </section>
+
+    <section>
+      <h3>We have provided a list of people that you could reach out to:</h3>
+      <table border="1" cellspacing="0" cellpadding="8">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Peter Jane</td>
+            <td>+254 721 213 312</td>
+            <td>pjane@gmail.com</td>
+            <td>Project Manager</td>
+          </tr>
+          <tr>
+            <td>Jane Clair</td>
+            <td>+253 733 321 123</td>
+            <td>janeC@yahoo.com</td>
+            <td>HR</td>
+          </tr>
+          <tr>
+            <td>Clair Peter</td>
+            <td>+255 233 322 232</td>
+            <td>claPet@gmail.com</td>
+            <td>HR</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <img src="image.png" alt="Logo" />
+    <p>&copy; 2025 All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
